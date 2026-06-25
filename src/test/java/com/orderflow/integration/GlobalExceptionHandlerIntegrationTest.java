@@ -1,6 +1,7 @@
 package com.orderflow.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.orderflow.config.AbstractIntegrationTest;
 import com.orderflow.dto.CreateOrderRequest;
 import com.orderflow.dto.CreateProductRequest;
 import com.orderflow.entity.Product;
@@ -21,9 +22,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@SpringBootTest
-@AutoConfigureMockMvc
-class GlobalExceptionHandlerIntegrationTest {
+class GlobalExceptionHandlerIntegrationTest extends AbstractIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;

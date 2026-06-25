@@ -8,8 +8,7 @@ public class MySqlContainerConfig {
             new MySQLContainer<>("mysql:8.4")
                     .withDatabaseName("orderflow")
                     .withUsername("root")
-                    .withPassword("root")
-                    .withReuse(true);
+                    .withPassword("root");
 
     static {
 

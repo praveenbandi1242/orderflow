@@ -23,5 +23,8 @@ public abstract class AbstractIntegrationTest {
         registry.add(
                 "spring.datasource.password",
                 () -> MySqlContainerConfig.getContainer().getPassword());
+
+        registry.add("spring.datasource.driver-class-name",
+                () -> MySqlContainerConfig.getContainer().getDriverClassName());
     }
 }
